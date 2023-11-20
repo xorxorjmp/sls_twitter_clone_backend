@@ -1,0 +1,25 @@
+{
+  "name": "sls_twitter_clone_backend",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sls": "sls"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.8",
+    "aws-sdk": "^2.778.0",
+    "jest": "^29.7.0",
+    "serverless": "^2.4.0",
+    "serverless-appsync-plugin": "^1.4.0",
+    "serverless-export-env": "^1.4.0",
+    "serverless-iam-roles-per-function": "^2.0.2"
+  },
+  "dependencies": {
+    "chance": "^1.1.11"
+  }
+}
