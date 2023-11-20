@@ -1,6 +1,6 @@
 const chance = require('chance').Chance()
 
-const a_random_user = () {
+const a_random_user = () => {
     const firstName = chance.first({ nationality: 'en' })
     const lastName = chance.first({ nationality: 'en' })
     // Prevent colission

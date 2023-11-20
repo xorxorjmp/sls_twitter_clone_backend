@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const we_invoke_confirmUserSignup = async (username, name, email) => {
     const handler = require('../../functions/confirm-user-signup').handler
 
@@ -5,9 +7,11 @@ const we_invoke_confirmUserSignup = async (username, name, email) => {
 
     const event = {
         "version": "1",
-        "triggerSource": "PostConfirmation_ConfirmSignup",
-        "region": "us-east-1",
-        "userPoolId": "us-east-1_XgzZmqL3b",
+        "triggerSource": "PostConfirmation_ConfirmSignUp",
+        //"region": "us-east-1",
+        //"userPoolId": "us-east-1_XgzZmqL3b",
+        "region": process.env.AWS_REGION,
+        "userPoolId": process.env.COGNITO_USER_POOL_ID,
         "userName": username,
         "request":
         {
@@ -21,7 +25,7 @@ const we_invoke_confirmUserSignup = async (username, name, email) => {
             }
         },
         "response": { }
-}
+    }
 
     await handler(event, context)
 }
