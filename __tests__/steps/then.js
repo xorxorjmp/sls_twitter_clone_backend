@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config({ path: './.env' })
 const AWS = require('aws-sdk')
 
 const user_exists_in_UsersTable = async (id) => {
